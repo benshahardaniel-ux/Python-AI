@@ -10,6 +10,8 @@ st.set_page_config(
     page_icon="Bot"
 )
 
+newPage("Guessing Game")
+
 st.title("AI guessing game")
 
 load_dotenv() #טוענים את המשתנים
@@ -50,7 +52,8 @@ def send(prompt):
                     "text" : message.text
                 })
                 return message.text
-            except:
+            except Exception as e:
+                print(e)
                 print("Something went wrong, trying next model")
 
 prompt = """
