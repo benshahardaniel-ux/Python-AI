@@ -20,18 +20,22 @@ def web_search(query : str) -> str:
 
 st.session_state.page = ""
 def newPage(pagename):
+    if "page" not in st.session_state:
+        st.session_state.page = ""
     if st.session_state.page != pagename:
         print("new page")
         st.session_state.page = pagename
         st.session_state.history = []
 
 all_models = [
-    "gemini-2.5-flash-lite",
-    "gemini-2.5-flash",
-    "gemini-2.0-flash-lite",
-    "gemini-2.0-flash",
-    "gemini-3.0-flash",]
-
+    "gemini-3.1-flash-lite", #500 הודעות ביום
+    "gemini-2.5-flash-lite", #20 הודעות
+    "gemini-2.5-flash", #10 הודעות
+   # "gemini-2.0-flash",
+    "gemini-3-flash",
+    "gemini-3-flash-preview"
+   # "gemini-2.0-flash-lite"
+]
 def currentTime():
     print("use tool")
     """

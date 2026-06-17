@@ -1,5 +1,7 @@
 import streamlit as st
 
+from pages import Connect4
+
 st.set_page_config(
     page_title="Daniel's Projects",
     page_icon="👑",
@@ -27,3 +29,4 @@ st.markdown("""
 ### 🔹 [Guessing Game](/Guessing_Game)
 A Python guessing/alias-style game I created.
 """)
+st.page_link("pages/Connect4.py", label = "connect 4", icon="👀")

@@ -30,7 +30,7 @@ def start():
 
 gemini = genai.Client(api_key=API_KEY)
 
-all_models = ["gemini-2.5-flash","gemini-2.0-flash","gemini-2.5-flash-lite","gemini-2.0-flash-lite"]
+#all_models = ["gemini-2.5-flash","gemini-2.0-flash","gemini-2.5-flash-lite","gemini-2.0-flash-lite"]
 
 def send(prompt):
     st.session_state.history.append({
